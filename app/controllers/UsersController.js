@@ -1,17 +1,79 @@
 var users = require('../models/users');
-
+var relations = require('../models/relations');
 
 var UsersController = {
 
     index: function(req, res) {
-        res.render('users/index', {
-            title: 'users',
-            message: 'users'
+        var listfriend;
+        var listuser;
+        //danh sahc friendid
+        relations.findlistfriend({
+            userid: req.session.userid
+        }, function(err, result) {
+            if (!err) {
+                console.log(result);
+                listfriend = result;
+            }
+        })
+        //danh sahc user
+        users.findlistuser({
+            userid: req.session.userid
+        }, function(err, result) {
+            if (!err) {
+                console.log(result);
+                listuser = result;
+                res.render('users/index', {
+                    listfriend: listfriend,
+                    listuser: listuser
+                });
+            }
         });
+        //render
+        console.log(listfriend);
+        console.log(listuser);
+
     },
     signup: function(req, res) {
-        res.render('users/register');
+        res.render('users/register', {
+            layout: 'application'
+        });
     },
+
+    addfriend: function(req, res) {
+        relations.search({
+            userid: req.session.userid,
+            friendid: req.body.userid
+        }, function(err, result) {
+            if (err) {
+                //khong thanh cong
+                res.redirect('/users');
+            } else {
+                //thanh cong
+                if (result.length > 0) {
+                    //da ton tai
+                    res.redirect('/users');
+                } else {
+                    //chua ton tai
+                    users.addfriend({
+                        userid: req.session.userid,
+                        friendid: req.body.userid
+                    }, function(err, result) {
+                        if (err) {
+                            //that bai
+                            console.log("4444464");
+                            res.redirect('/users');
+                        } else {
+                            //thanh cong
+                            console.log("7979797");
+                            res.redirect('/users');
+                        }
+                    });
+                }
+            }
+        });
+
+    },
+
     register: function(req, res) {
         users.findByEmail({
                 email: req.body.email
@@ -57,6 +119,7 @@ var UsersController = {
             layout: 'application'
         });
     },
+
     search: function(req, res) {
         users.search({
                 email: req.body.email,
@@ -68,7 +131,6 @@ var UsersController = {
                     res.redirect('/users/login');
                 } else {
                     //kiem tra dang nhap
-                    console.log(result[0].id);
 
                     if (result.length == 1) {
                         //thuc hien thanh cong
@@ -85,6 +147,7 @@ var UsersController = {
                 }
             });
     },
+
     logout: function(req, res) {
         req.session.destroy();
         res.redirect('/users/login');
