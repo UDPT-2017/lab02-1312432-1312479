@@ -3,8 +3,8 @@
 **Name of your app** là một bài tập 2 tại môn UDPT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
 
 Thành viên:
-* [ x ] **1312432** Phạm Hữu Phong (tên tài khoản github)
-* [ x ] **1312479** Lại Trọng Sang (tên tài khoản github)
+ [ x ] **1312432** Phạm Hữu Phong (tên tài khoản github)
+ [ x ] **1312479** Lại Trọng Sang (tên tài khoản github)
 
 URL: **URL hosting của bài tập**
 
@@ -15,19 +15,19 @@ Sinh viên check vào các mục bên dưới và ghi mã sinh viên đã làm v
 Yêu cầu **GIT**
 * [ ] Có sử dụng GIT.
 * [ ] Sử dụng GIT theo Centralized Workflow.
-* [ x ] Sử dụng GIT theo Feature Branch Workflow.
+ [ x ] Sử dụng GIT theo Feature Branch Workflow.
 * [ ] Sử dụng GIT theo Gitflow Workflow.
 
 Yêu cầu **bắt buộc**
-* [ x ] Website layout theo kiến trúc MVC với các thành phần được tách thành nhiều module theo hướng dẫn. (**1312432**)
-* [ x ] Trang web được thiết kế sẽ bao gồm các trang: home, messages, users, about. (**1312432**)
-* [ x ] Cho phép người dùng biết họ đang ở trang nào (sử dụng breadcrumb, highlight navigation bar,...). (**1312432**)
-* [ x ] Cho phép người dùng đăng ký tài khoản bằng các thông tin: email, password, name, phone.(**1312432**)
-* [ x ] Đăng nhập bằng email và password.(**1312432**)
+ [ x ] Website layout theo kiến trúc MVC với các thành phần được tách thành nhiều module theo hướng dẫn. (**1312432**)
+ [ x ] Trang web được thiết kế sẽ bao gồm các trang: home, messages, users, about. (**1312432**)
+ [ x ] Cho phép người dùng biết họ đang ở trang nào (sử dụng breadcrumb, highlight navigation bar,...). (**1312432**)
+ [ x ] Cho phép người dùng đăng ký tài khoản bằng các thông tin: email, password, name, phone.(**1312432**)
+ [ x ] Đăng nhập bằng email và password.(**1312432**)
 * [ ] Sau khi đăng nhập, người dùng sẽ được chuyển đến trang liệt kê danh sách các tin nhắn đã nhận, sắp xếp theo thứ tự thời gian, một nút để tạo tin nhắn mới, nút để xem danh sách bạn bè và nút để xem các tin nhắn đã gửi.(**MSSV**)
 * [ ] Tin nhắn chưa đọc phải được làm nổi bật hơn các tin nhắn khác, có ghi nhận thời gian đã cách đây bao lâu.(**MSSV**)
 * [ ] Trang users cho phép xem danh sách người dùng có trong hệ thống và phải có nút "add" với những người dùng chưa là bạn để thêm vào danh sách bạn bè.(**MSSV**)
-* [ x ] Trang about thể hiện thông tin nhóm thực hiện đề tài.(**1312432**)
+ [ x ] Trang about thể hiện thông tin nhóm thực hiện đề tài.(**1312432**)
 * [ ] Nhấn nút "new message" sẽ chuyển sang giao diện cho phép người dùng gửi tin nhắn cho người dùng trong danh sách bạn bè. Người gửi phải nằm trong danh sách bạn bè và cho phép người dùng chọn qua combobox.(**MSSV**)
 * [ ] Nhấn "sent" sẽ chuyển sang giao diện hiển thị danh sách tin nhắn đã gửi. Mỗi tin nhắn cần hiện thời gian người nhận đã đọc.(**MSSV**)
 * [ ] Nhấn "refresh" để cập nhật danh sách tin nhắn mới nhất (ko nạp lại dữ liệu trên trang).(**MSSV**)

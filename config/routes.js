@@ -15,6 +15,7 @@ module.exports = function(app) {
         .post('/login', controllers.users.search)
         .post('/register', controllers.users.register)
         .get('/logout', controllers.users.logout)
+        .post('/', controllers.users.addfriend)
         .get('/register', controllers.users.signup);
     var messagesRoutes = Router()
         .get('/', controllers.messages.index);
