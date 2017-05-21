@@ -1,4 +1,4 @@
-# BT-UDPT-2 - *Name of your app*
+﻿# BT-UDPT-2 - *Name of your app*
 
 **Name of your app** là một bài tập 2 tại môn UDPT. Ứng dụng cho phép người dùng gửi tin nhắn (email) cho người dùng khác.
 
@@ -6,7 +6,7 @@ Thành viên:
  *[x] **1312432** Phạm Hữu Phong (tên tài khoản github)
  *[x] **1312479** Lại Trọng Sang (tên tài khoản github)
 
-URL: **URL hosting của bài tập**
+URL: **https://lab2-1312432-1312479.herokuapp.com**
 
 ## Yêu cầu
 

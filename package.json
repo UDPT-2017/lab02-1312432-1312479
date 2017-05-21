@@ -5,12 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"error\" && exit 1 ",
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "install": "node_modules/.bin/bower install"
   },
   "author": "1312432 1312479",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.17.1",
+    "bower": "^1.8.0",
+    "dotenv": "^4.0.0",
     "express": "^4.15.2",
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.2",
