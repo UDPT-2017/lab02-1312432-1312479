@@ -16,9 +16,13 @@ module.exports = function(app) {
         .post('/register', controllers.users.register)
         .get('/logout', controllers.users.logout)
         .post('/', controllers.users.addfriend)
+        .get('/listfriend', controllers.users.listfriend)
         .get('/register', controllers.users.signup);
     var messagesRoutes = Router()
-        .get('/', controllers.messages.index);
+        .get('/', controllers.messages.index)
+        .get('/createmessage', controllers.messages.create)
+        .post('/createmessage', controllers.messages.insert)
+        .get('/viewmessage', controllers.messages.view);
     var aboutsRoutes = Router()
         .get('/', controllers.abouts.index);
     app.use('/', homeRoutes);

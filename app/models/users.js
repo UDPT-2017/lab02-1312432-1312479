@@ -11,7 +11,11 @@ var users = {
     addfriend: function(relations, callback) {
         db.query('insert into relations(userid, friendid) values($1, $2)', [relations.userid, relations.friendid],
             function(err, result) {
-                callback(err, result.rows);
+                //
+                db.query('insert into relations(userid, friendid) values($1, $2)', [relations.friendid, relations.userid],
+                    function(err, result) {
+                        callback(err, result.rows);
+                    });
             });
     },
 
