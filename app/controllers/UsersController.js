@@ -138,7 +138,7 @@ var UsersController = {
                         req.session.userid = result[0].id;
                         //redirect   trang users
                         console.log(req.session);
-                        res.redirect('/users');
+                        res.redirect('/messages');
                     } else {
                         res.redirect('/users/login');
 
@@ -151,7 +151,18 @@ var UsersController = {
     logout: function(req, res) {
         req.session.destroy();
         res.redirect('/users/login');
-    }
+    },
+    listfriend: function(req, res){
+      relations.findlistfriend({
+        userid: req.session.userid
+      }, function(err, result) {
+        if(!err) {
+          res.render('users/listfriend',{
+            list: result
+          });
+        }
+      });
+    },
 };
 
 module.exports = UsersController;
