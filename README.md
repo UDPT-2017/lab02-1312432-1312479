@@ -19,7 +19,7 @@ Yêu cầu **GIT**
 * [ ] Sử dụng GIT theo Gitflow Workflow.
 
 Yêu cầu **bắt buộc**
- * [x] Website layout theo kiến trúc MVC với các thành phần được tách thành nhiều module theo hướng dẫn. (**1312432**)
+ * [x] Website layout theo kiến trúc MVC với các thành phần được tách thành nhiều module theo hướng dẫn. (** 1312432 **)
  * [x] Trang web được thiết kế sẽ bao gồm các trang: home, messages, users, about. (**1312432**)
  * [x] Cho phép người dùng biết họ đang ở trang nào (sử dụng breadcrumb, highlight navigation bar,...). (**1312432**)
  * [x] Cho phép người dùng đăng ký tài khoản bằng các thông tin: email, password, name, phone.(**1312432**)
